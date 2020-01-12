@@ -1,0 +1,13 @@
+<script type="text/javascript">
+  //1초마다 함수 실행
+  var i=0;
+
+  var intervalID=setInterval(function(){
+    alert(++i);
+  },1000);
+
+  //3초 후 함수 실행
+  setTimeout(function(){
+    clearInterval(intervalID);//Interval 지우기
+  },3000);
+</script>
