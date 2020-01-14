@@ -1,0 +1,44 @@
+<script type="text/javascript">
+  /*
+  function test(){
+    //arguments 객체 : 매개변수
+    alert(arguments[0]);
+    alert(arguments[1]);
+    alert(arguments[2]);
+  }
+  */
+
+  /*
+  function test(...numbers){
+    //numbers : 전개연산자
+    alert(numbers[0]);
+    alert(numbers[1]);
+    alert(numbers[2]);
+  }
+  */
+
+  /*
+  function test(a,b,...numbers){
+    //arguments 객체 : 매개변수
+    alert(numbers);
+  }
+  */
+
+  //test(1,2,3);
+
+  function test(a,b,c,d){
+    //$ 사용할 땐 '' 말고 `` 사용하기.
+    alert(`${a}:${b}:${c}:${d}`);
+  }
+
+  /*
+  var array=[1,2,3,4];
+  test(...array);
+  */
+
+  var array=[1,2];
+  test(484,53,...array);
+  test(...array,...array);
+
+  //전개 연산자 : 배열을 요소로 전개해서 parameter에 넣어줌
+</script>
