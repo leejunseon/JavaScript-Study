@@ -1,0 +1,28 @@
+<script>
+  var student={
+    이름:'연하진',
+    국어:92,
+    수학:34,
+    영어:255,
+    과학:3
+  }
+
+  var output='';
+
+  output+="'이름'in student: "+('이름'in student)+"\n";
+  output+="'성별'in student: "+('성별'in student);
+
+  alert(output);
+
+  output='';
+  with(student){
+    output+='이름: '+이름+'\n';
+    output+='국어: '+국어+'\n';
+    output+='수학: '+수학+'\n';
+    output+='영어: '+영어+'\n';
+    output+='과학: '+과학+'\n';
+    output+='총점: '+(국어+수학+영어+과학);
+  }
+
+  alert(output);
+</script>

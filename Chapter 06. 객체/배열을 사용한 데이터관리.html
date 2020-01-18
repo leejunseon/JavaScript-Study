@@ -1,0 +1,38 @@
+<script type="text/javascript">
+  var students=[];
+
+  students.push({이름:'윤인선',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'아라나',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'푸다거',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'탸두호',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'냐두지',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'다타하',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'두챠사',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'니챠아',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'댜쳐소',국어:34,수학:52,영어:53,과학:903});
+  students.push({이름:'태야두',국어:34,수학:52,영어:53,과학:45});
+
+  for(var i in students){
+    students[i].getSum=function(){
+      var sum;
+      with(this){
+        sum=국어+수학+영어+과학;
+      }
+      return sum;
+    };
+
+    students[i].getAverage=function(){
+      return this.getSum()/4;
+    };
+  }
+
+  var output='이름\t총점\t평균\n';
+  for(var i in students){
+    with(students[i]){
+      output+=이름+"\t"+getSum()+'\t'+getAverage()+'\n';
+    }
+  }
+
+  alert(output);
+
+</script>

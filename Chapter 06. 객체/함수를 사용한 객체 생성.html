@@ -1,0 +1,39 @@
+<script type="text/javascript">
+  function makeStudent(name,korean,math,english,science){
+
+    var willReturn={
+      이름:name,
+      국어:korean,
+      수학:math,
+      영어:english,
+      과학:science,
+      getSum:function(){
+        with(this){
+          return 국어+수학+영어+과학;
+        }
+      },
+      getAverage:function(){
+        return this.getSum()/4;
+      },
+      toString:function(){
+        with(this){
+          return 이름+'\t'+getSum()+'\t'+getAverage();
+        }
+      }
+    };
+
+    return willReturn;
+  }
+
+  var students=[];
+
+  students.push(makeStudent('이준선',34,53,24,63));
+  students.push(makeStudent('이두',35,2,65,43));
+
+  var output='이름\t총점\t평균\n';
+  for(var i in students){
+    output+=students[i].toString()+"\n";
+  }
+
+  alert(output);
+</script>
