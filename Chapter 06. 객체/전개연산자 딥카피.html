@@ -1,0 +1,33 @@
+<script>
+  /*
+  var originalArray=[1,2,3,4,5];
+  var newArray=[...originalArray];
+
+  originalArray[0]=24;
+
+  alert(originalArray);
+  alert(newArray);
+  */
+
+  /*
+  var A=[1,2,3,4,5];
+  var B=[12,23,34,45,56];
+  var New=[...A,...B];
+  alert(New);
+  */
+
+  /*
+  var originalArray=[1,2,3,4,5];
+
+  var newArrayA=[8,8,8,8,8,...originalArray];
+  var newArrayB=[...originalArray,8,8,8,8,8];
+
+  alert(newArrayA);
+  alert(newArrayB);
+  */
+
+  var original={name:'윤인성',birthday:new Date()};
+  var New={...original};
+
+  alert(JSON.stringify(New,null,2));
+</script>

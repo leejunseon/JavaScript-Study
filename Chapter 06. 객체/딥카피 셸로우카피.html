@@ -1,0 +1,30 @@
+<script>
+  /*
+  //얕은 복사
+  var originalArray=[1,2,3,4];
+  var newArray=originalArray;
+
+  originalArray[0]=273;
+
+  alert(originalArray);
+  alert(newArray);
+  */
+
+  //깊은 복사
+  function clone(obj){
+    var output={};
+    for(var i in obj){
+      output[i]=obj[i];
+    }
+    return output;
+  }
+
+  var original={a:13,b:20};
+  var referenced=original;
+  var cloned=clone(original);
+
+  original.a=20;
+
+  alert(JSON.stringify(referenced,null,2));
+  alert(JSON.stringify(cloned,null,2));
+</script>

@@ -1,0 +1,58 @@
+<script>
+  /*
+  var data={
+    이름:'Nater of Code',
+    가격:'3000원',
+    저자:'다니엘 쉬프만',
+    ISBN:38483,
+    페이지수:'324페이지'
+  };
+
+  alert(JSON.stringify(data,null,2));
+  */
+
+  /*
+  function makeObject(name,mineral,gas,supply){
+    var result={
+      이름:name,
+      미네랄:mineral,
+      가스:gas,
+      보급품:supply,
+      toString:function(){
+        var str='';
+        with(this){
+          str+=이름+","+미네랄+","+가스+","+보급품;
+        }
+        return str;
+      }
+    };
+    return result;
+  }
+
+  var list=[];
+
+  list.push(makeObject('일벌레',40,36,2));
+  list.push(makeObject('여왕',453,32,23));
+  list.push(makeObject('타락귀',430,436,22));
+
+  var str='';
+  for(var i in list){
+    str+=list[i].toString()+"\n";
+  }
+
+  alert(str);
+  //객체의 요소 중 함수 쓸 때는 이름() 으로 사용하기!
+  */
+
+  var object={
+    "+":1,
+    "-":2,
+    "*":3,
+    "/":4
+  };
+
+  alert(object['+']);
+  alert(object['-']);
+  alert(object['*']);
+  alert(object['/']);
+</script>
