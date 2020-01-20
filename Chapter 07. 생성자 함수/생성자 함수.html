@@ -1,0 +1,38 @@
+<script>
+  function Student(name,korean,math,english,science){
+    this.이름=name;
+    this.국어=korean;
+    this.수학=math;
+    this.영어=english;
+    this.과학=science;
+
+    this.getSum=function(){
+      with(this){
+        return 국어+수학+영어+과학;
+      }
+    };
+
+    this.getAverage=function(){
+      return this.getSum()/4;
+    };
+
+    this.toString=function(){
+      with(this){
+        return 이름+'\t'+this.getSum()+'\t'+this.getAverage();
+      }
+    };
+  }
+
+  var students=[];
+  students.push(new Student('윤하린',34,523,45,3));
+  students.push(new Student('이준선',34,25,64,352));
+
+  var output='이름\t총점\t평균\n';
+  for(var i in students){
+    output+=students[i].toString()+'\n';
+  }
+  alert(output);
+
+  alert(students[0] instanceof Student);
+  alert(students[0] instanceof Number);
+</script>
