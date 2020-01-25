@@ -1,0 +1,50 @@
+<script>
+  function Rectangle(w,h){
+    var width=w;
+    var height=h;
+
+    this.getWidth=function(){
+      return width;
+    };
+    this.getHeight=function(){
+      return height;
+    };
+
+    this.setWidth=function(w){
+      if(w<0){
+        alert('길이는 음수일 수 없습니다.');
+      }else{
+        width=w;
+      }
+    };
+    this.setHeight=function(h){
+      if(h<0){
+        alert('길이는 음수일 수 없습니다.');
+      }else{
+        height=h;
+      }
+    };
+  }
+
+  Rectangle.prototype.getArea=function(){
+    with(this){
+      return getWidth()*getHeight();
+    }
+  };
+</script>
+
+<script>
+  function Square(length){
+    this.base=Rectangle;
+    this.base(length,length);
+  }
+
+  Square.prototype=Rectangle.prototype;
+  //Square.prototype.constructor=Square;
+</script>
+
+<script>
+  var rectangle=new Rectangle(5,7);
+  var square=new Square(5);
+  alert(rectangle.getArea()+':'+square.getArea());
+</script>

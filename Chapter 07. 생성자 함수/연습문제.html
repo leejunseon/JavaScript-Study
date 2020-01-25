@@ -1,0 +1,19 @@
+<script>
+  class Product{
+    constructor(name,weight,cost){
+      this._name=name;
+      this._weight=weight;
+      this._cost=cost;
+    }
+
+    calculate(input){
+      var num=input/this._weight;
+      return this._cost*num;
+    }
+  }
+</script>
+
+<script>
+  var p=new Product('돼지삼겹살',100,1690);//객체 만들 때 var ~~~ = new 클래스()라고 해줘야함!
+  alert(p.calculate(200));
+</script>

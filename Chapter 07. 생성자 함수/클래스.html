@@ -1,0 +1,53 @@
+<script>
+  class Rectangle{
+    constructor(width,height){
+      this._width=width;
+      this._height=height;
+    }
+
+    get width(){
+      return this._width;
+    }
+    set width(input){
+      this._width=input;
+    }
+
+    get height(){
+      return this._height;
+    }
+    set height(input){
+      this._height=input;
+    }
+
+    getArea(){
+        return this._width*this._height;
+    }
+  }
+
+  var rectangle=new Rectangle(100,200);
+  rectangle.width=200;
+
+  alert(rectangle.width);
+  alert(rectangle.getArea());
+</script>
+
+<script>
+  class Square extends Rectangle{
+    constructor(length){
+      super(length,length);
+    }
+
+    set width(input){
+      this._width=input;
+      this._height=input;
+    }
+
+    setheight(input){
+      this._width=input;
+      this._height=input;
+    }
+  }
+
+  var square=new Square(100);
+  alert(square.getArea());
+</script>
