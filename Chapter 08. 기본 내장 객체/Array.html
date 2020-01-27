@@ -1,0 +1,54 @@
+<script>
+  var array=[2,5,3,6];
+
+  array.sort();
+  alert(array);
+
+  array.sort(function(left,right){
+    return right-left
+  });
+  alert(array);
+</script>
+
+
+<script>
+  class Student{
+    constructor(name,korean,math,english,science){
+      this.이름=name;
+      this.국어=korean;
+      this.수학=math;
+      this.영어=english;
+      this.과학=science;
+    };
+
+    getSum=function(){
+      return this.국어+this.수학+this.영어+this.과학;
+    };
+
+    getAverage=function(){
+      return this.getSum()/4;
+    };
+
+    toString=function(){
+      return this.이름+' '+this.getSum()+' '+this.getAverage();
+    };
+  }
+
+  var students=[];
+  students.push(new Student('윤하린',45,2,654,2));
+  students.push(new Student('윤명월',345,632,2,35));
+  students.push(new Student('wef',345,436345,2,35));
+  students.push(new Student('bsdf',345,632,2,334535));
+
+  //체이닝 사용
+  students=students.sort(function(left,right){
+    return right.getSum()-left.getSum();
+  }).slice(0,2);
+
+  var output='';
+  for(var i in students){
+    output+=students[i].toString()+'\n';
+  }
+
+  alert(output);
+</script>
